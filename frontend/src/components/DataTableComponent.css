@@ -1,0 +1,99 @@
+.tabla-container {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.styled-table {
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.rdt_Pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.table-navigation {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.table-navigation button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.table-navigation button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 1024px) {
+    .styled-table {
+        width: 95%;
+    }
+
+    .table-navigation {
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%
+    }
+
+    .table-navigation button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .styled-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .rdt_Pagination {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .table-navigation {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .table-navigation button {
+        width: 80%;
+        font-size: 12px;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .table-navigation {
+        width: 80%;
+    }
+
+    .table-navigation button {
+        font-size: 11px;
+    }
+}
