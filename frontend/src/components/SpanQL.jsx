@@ -13,7 +13,7 @@ const SpanQL = () => {
     setIsLoading(true); 
     const data = { consulta };
 
-    fetch("http://localhost:5000/", {
+    fetch("https://spanql-backend.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,15 @@ const SpanQL = () => {
           ) : datosTabla ? (
             <DataTableComponent datosTabla={datosTabla} />
           ) : (
-            <p>No hay datos disponibles</p>
+            <>
+              <h2>Tablas de prueba:</h2>
+              <br />
+              <ul>
+                <li>departamentos</li><br />
+                <li>empleados</li><br />
+                <li>mascotas</li><br />
+              </ul>
+            </>
           )}
         </div>
       </div>

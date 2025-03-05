@@ -1,16 +1,16 @@
 from flask import Flask, request, jsonify
 from .utils import main
 import mysql.connector
-
+from decouple import config
 BASE_DATOS_ACTUALIZADA = {}
 
 def register_routes(app):
 
-    app.config["MYSQL_HOST"] = "localhost"
-    app.config["MYSQL_USER"] = "root"
-    app.config["MYSQL_PASSWORD"] = "1234"
-    app.config["MYSQL_DB"] = "pruebas"
-    app.config["MYSQL_PORT"] = 3306
+    app.config["MYSQL_HOST"] = config("MYSQL_HOST")
+    app.config["MYSQL_USER"] = config("MYSQL_USER")
+    app.config["MYSQL_PASSWORD"] = config("MYSQL_PASSWORD")
+    app.config["MYSQL_DB"] = config("MYSQL_DB")
+    app.config["MYSQL_PORT"] = config("MYSQL_PORT", cast=int)
 
     def actualizar_base_datos():
         global BASE_DATOS_ACTUALIZADA

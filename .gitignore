@@ -1,0 +1,43 @@
+# === BACKEND (Flask) ===
+venv/
+.env
+instance/
+__pycache__/
+*.py[cod]
+*$py.class
+logs/
+*.log
+db.sqlite3
+
+# === FRONTEND (React + Vite) ===
+node_modules/
+dist/
+build/
+.vite/
+.vitepress/dist/
+coverage/
+*.map
+
+# === ARCHIVOS COMPARTIDOS ENTRE BACKEND Y FRONTEND ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+
+# === CONFIGURACIÓN Y ENTORNOS ===
+.env.local
+.env.development
+.env.production
+.env.test
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# === DOCKER (SI USAS) ===
+docker-compose.override.yml
+
+# === ARCHIVOS DE MYSQL Y EXPORTACIONES ===
+*.sql
