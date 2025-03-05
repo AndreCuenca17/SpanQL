@@ -13,7 +13,7 @@ const SpanQL = () => {
     setIsLoading(true); 
     const data = { consulta };
 
-    fetch("https://spanql-backend.onrender.com", {
+    fetch("http://localhost:5000", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
